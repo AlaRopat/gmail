@@ -14,7 +14,7 @@ public class MainPage extends AbstractPage {
 	@FindBy(xpath = "//div[@class='T-I J-J5-Ji T-I-KE L3']")
 	private WebElement buttonWrite;
 	@FindBy(xpath = "//tr[@class='zA zE']")
-	private WebElement newLetter;
+	private WebElement unreadLetter;
 	@FindBy(xpath = "//input[@name='q']")
 	private WebElement inputSpam;
 	@FindBy(xpath = "//button[@class='gbqfb']")
@@ -23,6 +23,14 @@ public class MainPage extends AbstractPage {
 	private WebElement buttonSetting;
 	@FindBy(xpath = "//div[@class='J-N aMS']")
 	private WebElement menuitemSettings;
+	@FindBy(xpath = "//div[@class='oZ-jc T-Jo J-J5-Ji T-Jo-Jp']")
+	private WebElement checkbox;
+	@FindBy(xpath = "//div[@class='T-I J-J5-Ji nX T-I-ax7 T-I-Js-Gs  ar7']")
+	private WebElement buttonDelete;
+//	@FindBy(xpath = "//a[@class='gb_A gb_8 gb_f']")
+//	private WebElement linkProfile;
+	@FindBy(xpath = "//a[@class='gb_A gb_8 gb_f gb_2']")
+	private WebElement username;
 
 	public MainPage(WebDriver driver) {
 		super(driver);
@@ -40,8 +48,9 @@ public class MainPage extends AbstractPage {
 	}
 
 	public void openLetter() {
-	
-		newLetter.click();
+		(new WebDriverWait(driver, 35)).until(ExpectedConditions
+				.visibilityOf(unreadLetter));
+		unreadLetter.click();
 	}
 
 	public void goToSpam() {
@@ -57,4 +66,16 @@ public class MainPage extends AbstractPage {
 		menuitemSettings.click();
 	}
 
+	public void clickCheckbox() {
+		checkbox.click();
+	}
+
+	public void clickButtonDelete() {
+		buttonDelete.click();
+	}
+
+	public String getUsername() {
+		
+		return username.getText();
+	}
 }

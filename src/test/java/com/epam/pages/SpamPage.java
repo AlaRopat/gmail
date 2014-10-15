@@ -14,7 +14,8 @@ import com.epam.object.User;
 
 public class SpamPage extends AbstractPage {
 	private final String BASE_URL = "https://mail.google.com/mail/spam";
-	
+	@FindBy(xpath = "//tr[@class='zA zE']")
+	private WebElement unreadLetter;
 	@FindBy(xpath = "//div[@class='xS']")
 	private List<WebElement> letters;
 
@@ -30,7 +31,7 @@ public class SpamPage extends AbstractPage {
 
 	
 	public int getNumberofLetter() {
-		
+		(new WebDriverWait(driver, 35)).until(ExpectedConditions.visibilityOf(unreadLetter));
 		return letters.size();
 		
 	}

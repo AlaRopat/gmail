@@ -1,9 +1,9 @@
 package com.epam.object;
 
 public enum User {
-	USER1("olgakumova335@gmail.com", "Bittersweet789"), USER2(
-			"olgaadam438@gmail.com", "Bittersweet789"), USER3(
-			"loraadams25@gmail.com", "Bittersweet789");
+	USER1("user1fortestwebdriver@gmail.com", "Bittersweet789"), USER2(
+			"user2fortestwebdriver@gmail.com", "Bittersweet789"), USER3(
+			"user3fortestwebdriver@gmail.com", "Bittersweet789");
 	private String username;
 	private String password;
 

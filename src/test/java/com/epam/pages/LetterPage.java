@@ -15,6 +15,18 @@ public class LetterPage extends AbstractPage {
 	private WebElement buttonMore;
 	@FindBy(xpath = "//div[@class='b7 J-M']")
 	private WebElement menu;
+	@FindBy(xpath = "//div[@class='a3s']/child::a[position()=4]")
+	private WebElement linrBelowToConfirmTheRequest;
+
+	public LetterPage(WebDriver driver) {
+		super(driver);
+		PageFactory.initElements(this.driver, this);
+	}
+
+	@Override
+	public void openPage() {
+
+	}
 
 	public void markAsSpam() {
 		(new WebDriverWait(driver, 5)).until(ExpectedConditions
@@ -25,13 +37,15 @@ public class LetterPage extends AbstractPage {
 		buttonReportSpam.click();
 	}
 
-	public LetterPage(WebDriver driver) {
-		super(driver);
-		PageFactory.initElements(this.driver, this);
-	}
-
-	@Override
-	public void openPage() {
+	public void goToLink() {
+		linrBelowToConfirmTheRequest.click();
+		String windowHandel = driver.getWindowHandle();
+//		(new WebDriverWait(driver, 5)).until(ExpectedConditions
+//				.visibilityOfElementLocated(By
+//						.xpath("//td[text()='Confirmation Success!']")));
+		driver.switchTo().window(windowHandel);
+		
+		driver.close();
 
 	}
 

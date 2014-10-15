@@ -14,7 +14,7 @@ public class EmailPage extends AbstractPage {
 	private WebElement inputAdress;
 	@FindBy(xpath = "//input[@class='aoT']")
 	private WebElement inputSubject;
-	@FindBy(xpath = "//div[@class='Am Al editable LW-avf']")
+	@FindBy(xpath = "//div[@class='Am Al editable']/iframe")
 	private WebElement inputText;
 	@FindBy(xpath = "//div[@class='T-I J-J5-Ji aoO T-I-atl L3']")
 	private WebElement buttonSend;
@@ -30,14 +30,16 @@ public class EmailPage extends AbstractPage {
 		inputAdress.sendKeys(email.getAdress());
 	}
 
-	public void fillsubject(Email email,int length) {
+	public void fillsubject(Email email, int length) {
 		email.setSubject(Utils.getRandomString(length));
 		inputSubject.sendKeys(email.getSubject());
 	}
 
-	public void writeTextOfMessage(Email email,int length) {
+	public void writeTextOfMessage(Email email, int length) {
 		email.setMessage(Utils.getRandomString(length));
+	
 		inputText.sendKeys(email.getMessage());
+
 	}
 
 	public void clickOnSendMessage() {
