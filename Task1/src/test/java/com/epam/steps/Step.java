@@ -187,7 +187,7 @@ public class Step {
 
 
 
-	
+
 	public boolean isLetterFromUser1WithoutAttachInInboxAndNotMarkAsImportant(
 			User user) {
 		MainPage mainPage = new MainPage(driver);
