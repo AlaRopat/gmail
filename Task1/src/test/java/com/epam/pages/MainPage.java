@@ -11,8 +11,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.epam.steps.Step;
-
 public class MainPage extends AbstractPage {
 	private final String BASE_URL = "https://mail.google.com/";
 
