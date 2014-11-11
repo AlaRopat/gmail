@@ -9,7 +9,6 @@ package com.epam.steps;
 import java.awt.AWTException;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -122,10 +121,7 @@ public class Step {
 
 	}
 
-	public void deleteLetterInTrash() {
-		TrashPage trashPage = new TrashPage(driver);
-		trashPage.deleteLetter();
-	}
+	
 
 	public void setForwardToUser(User user) {
 		ForwardingPage forwardingPage = new ForwardingPage(driver);
