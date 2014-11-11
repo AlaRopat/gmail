@@ -115,11 +115,7 @@ public class Step {
 
 	}
 
-	public void deleteLetterInInbox() {
-		MainPage mainPage = new MainPage(driver);
-		mainPage.deleteLetter();
-
-	}
+	
 
 	
 
