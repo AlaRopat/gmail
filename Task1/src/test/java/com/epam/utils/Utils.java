@@ -22,16 +22,7 @@ public class Utils {
 		return sb.toString();
 	}
 
-	public static void checkAlert() {
-
-		try {
-			Alert alert = driver.switchTo().alert();
-			alert.accept();
-		} catch (NoAlertPresentException e) {
-
-		}
-
-	}
+	
 
 	public static File getFile(int fileSize) throws IOException {
 		File file = new File("src/file.txt");
