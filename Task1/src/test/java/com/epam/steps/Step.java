@@ -187,11 +187,7 @@ public class Step {
 
 
 
-	public void deleteFilter() {
-		FiltersPage filtersPage = new FiltersPage(driver);
-		filtersPage.deleteFilter();
-	}
-
+	
 	public boolean isLetterFromUser1WithoutAttachInInboxAndNotMarkAsImportant(
 			User user) {
 		MainPage mainPage = new MainPage(driver);
