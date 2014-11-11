@@ -196,14 +196,7 @@ public class Step {
 
 	}
 
-	public void removeUserFromForward() {
-		ForwardingPage forwardingPage = new ForwardingPage(driver);
-		SettingsPage settingsPage = new SettingsPage(driver);
-		settingsPage.chooseForwardingTab();
-		forwardingPage.removeUser();
-		logger.info("remove user from forward");
 
-	}
 
 	public void deleteFilter() {
 		FiltersPage filtersPage = new FiltersPage(driver);
