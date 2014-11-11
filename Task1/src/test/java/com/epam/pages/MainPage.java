@@ -86,10 +86,7 @@ public class MainPage extends AbstractPage {
 
 	}
 
-	public void deleteLetter() {
-		checkboxSelect.click();
-		buttonDelete.click();
-	}
+	
 
 	public String getUsername() {
 
