@@ -177,12 +177,7 @@ public class Step {
 		trashPage.waitUnreadLetter();
 	}
 
-	public void goToFolderInbox() {
-		MainPage mainPage = new MainPage(driver);
-		mainPage.goToInbox();
-		logger.info("Try to go to folder inbox");
-
-	}
+	
 
 	public void configureForwardingCopyOfIncomingMail() {
 		ForwardingPage forwardingPage = new ForwardingPage(driver);
