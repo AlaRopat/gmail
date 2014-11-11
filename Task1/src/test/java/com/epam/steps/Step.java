@@ -116,11 +116,7 @@ public class Step {
 
 	}
 
-	public void deleteLetterInTrash() {
-		TrashPage trashPage = new TrashPage(driver);
-		trashPage.deleteLetter();
-	}
-
+	
 	public void setForwardToUser(User user) {
 		ForwardingPage forwardingPage = new ForwardingPage(driver);
 		SettingsPage settingsPage = new SettingsPage(driver);
