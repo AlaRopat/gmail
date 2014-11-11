@@ -1,9 +1,14 @@
+
 package com.epam.steps;
+
+
+
+
+
 
 import java.awt.AWTException;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -117,6 +122,7 @@ public class Step {
 	}
 
 	
+
 	public void setForwardToUser(User user) {
 		ForwardingPage forwardingPage = new ForwardingPage(driver);
 		SettingsPage settingsPage = new SettingsPage(driver);
@@ -304,3 +310,4 @@ public class Step {
 		return mainPage.isLetterInFolderStarred();
 	}
 }
+
