@@ -1,16 +1,10 @@
 package com.epam.test;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import com.epam.object.User;
-import com.epam.pages.EmailPage;
 import com.epam.steps.Step;
 
 public class GmailAutomationTest {
@@ -18,7 +12,6 @@ public class GmailAutomationTest {
 	private User user1 = User.USER1;
 	private User user2 = User.USER2;
 	private User user3 = User.USER3;
-	private WebDriver driver;
 
 	@BeforeMethod(description = "Init browser")
 	public void setUp() {
